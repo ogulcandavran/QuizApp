@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+html{
+  font-size: 16px;
+}
+
+body {
+  background-image: url("./SVGS/SVG/Artboard\ 1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Nunito", sans-serif;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.section {
+  position: relative;
+  background-color: rgba(7, 45, 41, 0.5);
+  background-size: cover;
+  width: 640px;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  border-radius: 5%;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fbfcfc;
+}
+
+button {
+  height: 50px;
+  width: 150px;
+  margin-top: 2rem;
+  color: #fbfcfc;
+  background-color: tomato;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.start-page-container p {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: 0.25s linear;
+}
+
+.start-page-container h3 {
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+  color: #072d29;
+  font-size: 1.6rem;
+  font-family: "Nunito Sans", sans-serif;
+  border-bottom: #95c0a7 5px solid;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  transition: 1s linear;
+}
+
+.start-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.page-number {
+  position: absolute;
+  right: 27px;
+  top: 20px;
+  color: #072d29;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.page-number span {
+  color: tomato;
+}
+
+.previous-page {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 27px;
+  top: 28px;
+  color: #072d29;
+  font-size: 0.9rem;
+}
+
+.previous-page img {
+  margin-right: 0.35rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.selected {
+  color: #072d29;
+  transform: scale(1.3);
+  font-weight: 600;
+}
+
+.bottom-margin {
+  margin-bottom: 4rem;
+}
+
+h3.bouncy {
+  -webkit-animation: heartbeat 1.5s ease-in-out both;
+  animation: heartbeat 1.5s ease-in-out both;
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    color: tomato;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+.start-page-container.pseudo h3 {
+  margin-bottom: 6rem;
+}
+
+.start-page-container.pseudo p {
+  margin-bottom: 3rem;
+}
+
+.selection-span {
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+}
+
+.page-number .selection-span {
+  color: #072d29;
+}
+
+.page-number .selection-span.left {
+  margin-right: 0.68rem;
+}
+
+.loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.loading div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: tomato;
+  animation: loading 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.loading div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.loading div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.loading div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes loading {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%,
+  100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+.green {
+  font-size: 1.5rem;
+  background-color: rgba(45, 224, 87, 0.4);
+  transition: 1s ease;
+}
+
+.red {
+  background-color: rgba(173, 43, 35, 0.4);
+  font-size: 1.5rem;
+  transition: 1s ease;
+}
+
+.questions {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.questions h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.6rem;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+  color: #FBFCFC;
+}
+
+.questions p {
+  font-size: 1.1rem;
+  border-bottom: 2px rgba(7, 45, 41, 0.06) solid;
+  text-align: center;
+  width: 620px;
+  padding: 20px 0 20px 0;
+  cursor: pointer;
+}
+
+.question-left-count {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.1rem;
+}
+
+.question-left-count span {
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+.selections {
+  background-color: rgba(7, 45, 41, 0.05);
+  border-top: 2px rgba(7, 45, 41, 0.06) solid;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.outer-div{
+  width: 500px;
+  height: 40px;
+  position: relative;
+  border: 2px white solid;
+  margin-bottom: 4rem;
+  text-align: center;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-div{
+  height: 40px;
+  background-color: rgba(45, 224, 87, 0.4);
+  border: 2px rgba(7, 45, 41, 0.3) solid;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+
+.result-container p {
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width:640px) {
+  .section{
+    width: 100%;
+  }
+  html{
+    font-size: 14px;
+  }
+
+  .questions h3{
+    font-size: 1.4rem;
+    width: 320px;
+}
+  }
+
